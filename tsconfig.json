@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+          "outDir": "dist",
+          "rootDir": "src",
+          "target": "es2021", // ecmascript utilizado
+          "sourceMap": true, // cria um map com informações na pasta dist
+          "module": "commonjs",
+          "skipLibCheck": true,
+          "forceConsistentCasingInFileNames": true, // nao deixa import com letra maiúscula
+          "moduleResolution": "node", // importa apenas ao selecionar a pasta
+          "esModuleInterop": true,
+          "baseUrl": "src",
+          "paths": {
+            "@/*": ["*"],
+            "@/tests/*": ["../tests/*"]
+          },
+          "strict": true
+      },
+      "include": ["src"]
+  }
