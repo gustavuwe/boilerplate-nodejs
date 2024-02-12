@@ -1,2 +1,6 @@
 node_modules
 dist
+jest.config.js
+sorter.js
+prettify.js
+block-navigation.js

@@ -2,10 +2,10 @@
     "extends": "standard-with-typescript",
     "parserOptions": {
         "project": "./tsconfig.json",
-        "tsconfigRootDir": "__dirname",
-        "sourceType": "module"
-    },
-    "eslint.workingDirectories": [ "./src", "./server" ]
+        "tsconfigRootDir": "./"
+        // "sourceType": "module"
+    }
+    // "eslint.workingDirectories": [ "./src", "./server" ]
 }
 
 // module.exports = {
