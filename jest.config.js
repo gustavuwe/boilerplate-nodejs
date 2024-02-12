@@ -1,6 +1,20 @@
 /** @type {import('jest').Config} */
 const config = {
-  roots: ['<rootDir>/src'],
+  roots: ['<rootDir>/src/**/*.ts'],
+  coverageDirectory: "coverage",
+  coverageProvider: "babel",
+  moduleNameMapper: {
+    '@/tests/(.+)': '<rootDir/tests/$1',
+    '@/(.+)': '<rootDir>/src/$1' // substitui qualquer coisa pelo rootDir
+  },
+
+  roots: [
+    '<rootDir>/src',
+    '<rootDir>/tests'
+  ],
+  transform: {
+    '\\.ts$': 'ts-jest' // -> transforma .ts em ts-jest
+  },
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -20,7 +34,6 @@ const config = {
   collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: "coverage",
 
   testEnvironment: 'node',
 
@@ -34,7 +47,6 @@ const config = {
   // ],
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: "v8",
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [

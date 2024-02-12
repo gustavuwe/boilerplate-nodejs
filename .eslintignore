@@ -4,3 +4,4 @@ jest.config.js
 sorter.js
 prettify.js
 block-navigation.js
+coverage

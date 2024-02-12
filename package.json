@@ -6,8 +6,9 @@
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig-build.json",
     "start": "node dist/main/api",
-    "test": "jest",
-    "test:staged": "jest",
+    "test": "jest --passWithNoTests --no-cache --runInBand",
+    "test:watch": "npm test -- --watch",
+    "test:coverage": "npm test -- --coverage",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix"
   },
